@@ -1,0 +1,12 @@
+module imm_gen(
+     input logic [11:0] inst_code,
+     output logic [31:0] Imm_out)
+	  );
+	  
+	  always_comb
+	       case(inst_code[11])
+			    1'b1: Imm_out={20{{1'b1},inst_code};
+				 1'b0: Imm_out={20{{1'b0},inst_code};
+			 endcase 
+     end 
+endmodule	  

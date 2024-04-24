@@ -1,0 +1,58 @@
+`timescale 1ns / 1ps
+
+module tb_pc_with_adder_4;
+  reg clk;
+  reg reset;
+  reg rg_wrt_en;
+  reg [31:0] write_data;
+  wire [31:0] rg_rd_data1;
+  wire [31:0] rg_rd_data2;
+
+  // Instantiate the module under test
+  pc_with_adder_4 uut (
+    .clk(clk),
+    .reset(reset),
+    .rg_wrt_en(rg_wrt_en),
+    .write_data(write_data),
+    .rg_rd_data1(rg_rd_data1),
+    .rg_rd_data2(rg_rd_data2)
+  );
+
+  // Clock generation
+  always begin
+    #5 clk = ~clk; // Toggle clock every 5 time units
+  end
+
+  // Initialize signals
+  initial begin
+    clk = 0;
+    reset = 0;
+    rg_wrt_en = 0;
+    write_data = 32'h00000000;
+
+    // Apply reset
+    reset = 1;
+    #10 reset = 0;
+
+    // Test case 1
+    // Provide appropriate input values for your test case
+    rg_wrt_en = 1;
+    write_data = 32'h12345678;
+    #10;
+	 rg_wrt_en = 1;
+    write_data = 32'h12345678;
+	 #10;
+	 rg_wrt_en = 0;
+    // Test case 2
+    // ...
+    
+    // Add more test cases as needed
+    
+    // Monitor output
+    $display("rg_rd_data1 = %h, rg_rd_data2 = %h", rg_rd_data1, rg_rd_data2);
+
+    // End simulation after a few clock cycles
+    #100;
+    $finish;
+  end
+endmodule

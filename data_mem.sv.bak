@@ -1,0 +1,8 @@
+module data_mem(
+      input logic clk,we,
+		input logic [31:0] address,write_data,
+		output logic [31:0] reda_data
+		);
+		
+		logic [31:0] RAM [63:0]
+		

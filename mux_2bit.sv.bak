@@ -1,0 +1,18 @@
+module mux_2bit  (
+    input logic [1:0] sel, // 2-bit select input
+    input logic a,         // Input 0
+    input logic b,         // Input 1
+    input logic c,         // Input 2
+    output logic y         // Output
+);
+
+always_comb begin
+    case (sel)
+        2'b00: y = a;
+        2'b01: y = b;
+        2'b10: y = c;
+        default: y = 1'bz; // Tri-state if sel is invalid
+    endcase
+end
+
+endmodule

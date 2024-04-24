@@ -1,0 +1,44 @@
+`timescale 1ns / 1ps
+
+module tb_data_extractor_for_store;
+    reg [31:0] inst, data;
+    wire [31:0] y;
+
+    // Instantiate the data_extractor_for_store module
+    data_extractor_for_store dut (
+        .inst(inst),
+        .data(data),
+        .y(y)
+    );
+
+    // Initialize inputs
+    initial begin
+        inst = 32'h01000113;  // Example instruction
+        data = 32'hA5F0B376;  // Example data
+        // You can set different values for inst and data here
+        // for testing different cases.
+        
+        // Simulate for a period
+        #10;
+
+        // Finish the simulation
+        $finish;
+    end
+
+    // Monitor outputs (optional)
+    always @(negedge y) begin
+        $display("y = %h", y);
+        // Add other monitored signals here
+    end
+endmodule
+
+// Simulate the design
+initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(0, tb_data_extractor_for_store);
+    $display("Starting simulation");
+    $monitor($time, "Time: %0t", "");
+    $display("");
+    $display("Simulation finished");
+    $finish;
+end

@@ -1,0 +1,199 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 23:48:27  September 20, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		processor_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY final_data_path_03
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:48:27  SEPTEMBER 20, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name SYSTEMVERILOG_FILE adder_8.sv
+set_global_assignment -name SYSTEMVERILOG_FILE adder_32.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ins_memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE reg_filesv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE datamemory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_ins_memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_with_adder.sv
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_final_data_path_02 -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name SYSTEMVERILOG_FILE tb_pc_with_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_adder_8.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_pc_with_adder_2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pcsv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_with_adder_regfiles.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_pc_with_adder_regfiles.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_reg_filesv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_with_adder_3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_pc_with_adder_3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_with_adder_4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu_riscsv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_pc_with_adder_4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_with_adder_5.sv
+set_global_assignment -name SYSTEMVERILOG_FILE test_pc_with_adder_5.sv
+set_global_assignment -name SYSTEMVERILOG_FILE imm_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE test_imm_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux32.sv
+set_global_assignment -name SYSTEMVERILOG_FILE data_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE test_data_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pc_with_adder_6.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_pc_with_adder_6.sv
+set_global_assignment -name SYSTEMVERILOG_FILE main_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu_dec.sv
+set_global_assignment -name SYSTEMVERILOG_FILE with_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbench_with_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE data_extractor_for_load.sv
+set_global_assignment -name SYSTEMVERILOG_FILE data_extractor_for_store.sv
+set_global_assignment -name SYSTEMVERILOG_FILE with_controller_and_extractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbench_with_controller_and_extractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE with_controller_and_extractor_branch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE and_gate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbench_with_controller_and_extractor_branch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE branch_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE final_data_path.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_final_data_path.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_data_extractor_for_store.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_branch_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux_2bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE final_data_path_02.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_final_data_path_02.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_final_data_path_02 -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_final_data_path_02
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_final_data_path_02 -section_id tb_final_data_path_02
+set_global_assignment -name SYSTEMVERILOG_FILE final_data_path_03.sv
+set_location_assignment PIN_AB28 -to reset
+set_location_assignment PIN_M23 -to clk
+set_location_assignment PIN_E21 -to ALUResult[0]
+set_location_assignment PIN_E22 -to ALUResult[1]
+set_location_assignment PIN_E25 -to ALUResult[2]
+set_location_assignment PIN_E24 -to ALUResult[3]
+set_location_assignment PIN_H21 -to ALUResult[4]
+set_location_assignment PIN_G20 -to ALUResult[5]
+set_location_assignment PIN_G22 -to ALUResult[6]
+set_location_assignment PIN_G21 -to ALUResult[7]
+set_location_assignment PIN_F17 -to ALUResult[8]
+set_location_assignment PIN_G19 -to ALUResult[9]
+set_location_assignment PIN_F19 -to ALUResult[10]
+set_location_assignment PIN_E19 -to ALUResult[11]
+set_location_assignment PIN_F21 -to ALUResult[12]
+set_location_assignment PIN_F18 -to ALUResult[13]
+set_location_assignment PIN_E18 -to ALUResult[14]
+set_location_assignment PIN_J19 -to ALUResult[15]
+set_location_assignment PIN_H19 -to ALUResult[16]
+set_location_assignment PIN_J17 -to ALUResult[17]
+set_location_assignment PIN_G17 -to ALUResult[18]
+set_location_assignment PIN_J15 -to ALUResult[19]
+set_location_assignment PIN_H16 -to ALUResult[20]
+set_location_assignment PIN_J16 -to ALUResult[21]
+set_location_assignment PIN_H17 -to ALUResult[22]
+set_location_assignment PIN_F15 -to ALUResult[23]
+set_location_assignment PIN_G15 -to ALUResult[24]
+set_location_assignment PIN_G16 -to ALUResult[25]
+set_location_assignment PIN_H15 -to ALUResult[26]
+set_location_assignment PIN_G18 -to ALUResult[27]
+set_location_assignment PIN_Y22 -to ALUResult[28]
+set_location_assignment PIN_AA26 -to ALUResult[29]
+set_location_assignment PIN_U21 -to ALUResult[30]
+set_location_assignment PIN_AA19 -to ALUResult[31]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCS64
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_final_data_path_02.sv -section_id tb_final_data_path_02
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[31]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[30]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[29]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[28]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[27]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[26]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[25]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[24]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[23]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[22]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[21]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[20]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[19]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[18]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[17]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[16]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ALUResult[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to reset
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

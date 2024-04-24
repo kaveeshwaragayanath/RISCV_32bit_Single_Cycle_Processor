@@ -1,0 +1,12 @@
+module PC
+		 #(parameter WIDTH = 8)
+    (input logic [WIDTH-1:0] a,
+	  input logic clk,reset,
+     output logic [WIDTH-1:0] y);
+	  always @(posedge clk) begin
+     if (reset == 1 ) 
+         y <= 4'b00000000;
+     else
+         y <= a;
+     end
+end module 

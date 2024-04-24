@@ -1,0 +1,89 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/5th_sem/DSD/Processor/simulation/modelsim
+vfinal_data_path_02
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1704024788
+!i10b 1
+!s100 b:=jmBLSS6`l?`7Y1JFNz1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IH@<gY7L[WT4GGX4;n<I7P2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1704024780
+Z6 8processor.svo
+Z7 Fprocessor.svo
+!i122 0
+L0 32 171292
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1704024787.000000
+Z10 !s107 processor.svo|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+.|processor.svo|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+.
+Z14 tCvgOpt 0
+vhard_block
+R1
+R2
+!i10b 1
+!s100 ;H`gB<An0zaWXCDVRGbPR2
+R3
+Ii0Ln1]dDaZILG[IaM]3b;3
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 171325 34
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vtb_final_data_path_02
+R1
+R2
+!i10b 1
+!s100 0M3KoO;a3^3_4CI?Sd9NB2
+R3
+Idbo;9JTe=YiAKFK55XoJA1
+R4
+S1
+R0
+w1697475817
+8E:/5th_sem/DSD/Processor/tb_final_data_path_02.sv
+FE:/5th_sem/DSD/Processor/tb_final_data_path_02.sv
+!i122 1
+L0 3 66
+R8
+r1
+!s85 0
+31
+!s108 1704024788.000000
+!s107 E:/5th_sem/DSD/Processor/tb_final_data_path_02.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/5th_sem/DSD/Processor|E:/5th_sem/DSD/Processor/tb_final_data_path_02.sv|
+!i113 1
+R12
+!s92 -sv -work work +incdir+E:/5th_sem/DSD/Processor
+R14

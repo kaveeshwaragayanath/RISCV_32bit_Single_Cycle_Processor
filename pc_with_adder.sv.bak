@@ -1,0 +1,30 @@
+`timescale 1ns / 1ps
+
+
+
+
+module pc_with_adder 
+     
+    (input logic [7:0] pc_input,
+     input logic clk,reset
+	  
+	  );
+	  
+	  logic [7:0] pc_output;
+	  
+	  pc pc_module (
+	  .a(pc_input),
+	  .clk(clk),
+	  .reset(reset),
+	  .p(pc_output)
+	  );
+	  
+	  adder_8  pcadd (
+	  .a(pc_output),
+	  .b(8'b00000100),
+	  .y(pc_input)
+	  );
+	  
+      
+	  
+endmodule 

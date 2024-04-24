@@ -1,0 +1,23 @@
+module alu_dec 
+             (input logic f7b5 , op5,
+				 input logic [2:0] func3,
+				 input logic [1:0] aluop,
+				 output logic [3:0] alu_control
+				 );
+				 logic addSubType;
+			    assign addSubType= f7b5 & op5;
+				 always_comb 
+				     case(aluop)
+					     2'b00: alucontrol <= 4'b0010; //add
+						  2'b01: alucontrol <= 4'b0110; //sub 
+						  default: case({addSubType,func3})
+						       4'b0000: alucontrol <= 4'b0010; //add
+								 4'b1000: alucontrol <= 4'b0110; //sub
+								 4'b0111: alucontrol <= 4'b0000; //and 
+								 4'b0110: alucontrol <= 4'b0001; //or 
+								 default: alucontrol <= 4'bxxxx:
+						       endcase
+						endcase
+endmodule 
+						
+						

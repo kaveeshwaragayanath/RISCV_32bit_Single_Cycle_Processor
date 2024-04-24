@@ -1,0 +1,24 @@
+`timescale 1ns / 1ps
+module datapath 
+     #(parameter WIDTH = 8)
+    (input logic [WIDTH-1:0] pc_input,
+     input logic [WIDTH-1:0] contant,
+	  logic [WIDTH-1:0] pc_output,
+	  input logic clk,reset,
+	  output logic [WIDTH-1:0] adder_out);
+	  
+	  pc (8)# pc_module (
+	  .a(pc_input),
+	  .clk(clk),
+	  .reset(reset),
+	  .y(pc_output)
+	  )
+	  
+	  
+	  adder_8 (8)# pcadd (
+	  .a(pc_output),
+	  .b(8'b00001000)
+	  .y(adder_out)
+	  )
+end module 
+	  

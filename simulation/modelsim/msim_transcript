@@ -1,0 +1,104 @@
+# Reading pref.tcl
+# do processor_run_msim_gate_systemverilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+. {processor.svo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:07 on Dec 31,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+." processor.svo 
+# -- Compiling module final_data_path_02
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	final_data_path_02
+# End time: 17:43:08 on Dec 31,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/5th_sem/DSD/Processor {E:/5th_sem/DSD/Processor/tb_final_data_path_02.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:08 on Dec 31,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/5th_sem/DSD/Processor" E:/5th_sem/DSD/Processor/tb_final_data_path_02.sv 
+# -- Compiling module tb_final_data_path_02
+# 
+# Top level modules:
+# 	tb_final_data_path_02
+# End time: 17:43:08 on Dec 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb_final_data_path_02
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb_final_data_path_02 
+# Start time: 17:43:08 on Dec 31,2023
+# Loading sv_std.std
+# Loading work.tb_final_data_path_02
+# Loading work.final_data_path_02
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_mac_mult
+# Loading cycloneive_ver.cycloneive_mac_data_reg
+# Loading cycloneive_ver.cycloneive_mac_sign_reg
+# Loading cycloneive_ver.cycloneive_mac_mult_internal
+# Loading cycloneive_ver.cycloneive_mac_out
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 21834 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ALUResult = zzzzzzzz
+# ALUResult = 00000012
+# ALUResult = 00000013
+# ALUResult = 00000025
+# ALUResult = ffffffff
+# ALUResult = 00900000
+# ALUResult = 00000001
+# ALUResult = 00000001
+# ALUResult = 00000001
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000013
+# ALUResult = 00000012
+# ALUResult = 00000156
+# ALUResult = 00000019
+# ALUResult = 00000001
+# ALUResult = 00000001
+# ALUResult = 00000001
+# ALUResult = 00000013
+# ALUResult = 00000012
+# ALUResult = 00000056
+# ALUResult = 00000056
+# ALUResult = 00000000
+# ALUResult = fffffffb
+# ALUResult = fffffffb
+# ALUResult = 00000005
+# ALUResult = fffffff8
+# ALUResult = 00000012
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ALUResult = 00000000
+# ** Note: $finish    : E:/5th_sem/DSD/Processor/tb_final_data_path_02.sv(60)
+#    Time: 370 ns  Iteration: 0  Instance: /tb_final_data_path_02
+# 1
+# Break in Module tb_final_data_path_02 at E:/5th_sem/DSD/Processor/tb_final_data_path_02.sv line 60
+# End time: 17:43:31 on Dec 31,2023, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 1

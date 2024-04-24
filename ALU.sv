@@ -1,0 +1,59 @@
+module ALU (
+    input logic [31:0] SrcA,
+    input logic [31:0] SrcB,
+    input logic [3:0] Operation,
+    output logic [31:0] ALUResult,
+    output logic Con_BLT,
+	 output logic Con_BGT,
+    output logic zero
+);
+   
+    always_comb begin
+        ALUResult = 'd0;
+        Con_BLT = 'b0;
+		  Con_BGT =1'd0;
+        zero = 'b0;
+
+        case (Operation)
+            4'b0000: ALUResult = SrcA & SrcB;
+            4'b0001: ALUResult = SrcA | SrcB;
+            4'b0011: ALUResult = SrcA ^ SrcB;
+            4'b0010: ALUResult = SrcA + SrcB;
+				
+            4'b0110: begin
+                    ALUResult = $signed(SrcA) - $signed(SrcB);
+                    Con_BLT = ($signed(ALUResult) < $signed(1'd0));
+                    Con_BGT = ($signed(ALUResult) > $signed(1'd0));
+                    zero = ($signed(ALUResult) == $signed(1'd0));
+            end
+				
+				4'b0100:        //SLL
+                    ALUResult = SrcA << SrcB;
+            4'b0101:
+                    ALUResult = SrcA < SrcB;
+            4'b1010:
+                    ALUResult = ($signed(SrcA)<$signed(SrcB));
+			   4'b0111:
+                    begin       //unsigned branch
+                    ALUResult = SrcA - SrcB;
+                    Con_BLT = SrcA < SrcB;
+                    Con_BGT = SrcA > SrcB;
+                    zero = (ALUResult == 1'd0);
+                    end
+						  
+				4'b1000:        //SRL
+                    ALUResult = SrcA >> SrcB;
+            4'b1100:        //SRA
+                    ALUResult = $signed(SrcA) >>> SrcB;
+				4'b1111:
+				        begin
+						   logic [63:0] temp;
+						   temp =SrcA * SrcB;
+						  ALUResult=temp[31:0] ;
+						  end 
+				
+            default: ALUResult = 'b0;
+        endcase
+    end
+
+endmodule

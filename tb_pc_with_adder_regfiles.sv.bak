@@ -1,0 +1,59 @@
+`timescale 1ns / 1ps
+
+module tb_pc_with_adder_regfiles;
+    // Inputs
+    reg [7:0] pc_input;
+    reg clk;
+    reg reset;
+    reg rg_wrt_en;
+    reg [31:0] write_data;
+
+    // Outputs
+    wire [31:0] rg_rd_data1;
+    wire [31:0] rg_rd_data2;
+
+    // Instantiate the DUT (Design Under Test)
+    pc_with_adder_regfiles uut (
+        .pc_input(pc_input),
+        .clk(clk),
+        .reset(reset),
+        .rg_wrt_en(rg_wrt_en),
+        .write_data(write_data),
+        .rg_rd_data1(rg_rd_data1),
+        .rg_rd_data2(rg_rd_data2)
+    );
+
+    // Clock generation
+    always begin
+        clk = 0;
+        #5;  // Adjust the delay as needed
+        clk = 1;
+        #5;  // Adjust the delay as needed
+    end
+
+    // Test stimulus
+    initial begin
+        // Initialize signals
+        reset = 1;
+		  pc_input = 8'b0000;
+
+        // Release reset after a few clock cycles
+        #10 reset = 0;
+
+        // Loop to test different pc_input values
+        for (int i = 0; i < 256; i = i + 1) begin
+            // Apply a new pc_input value
+            pc_input = i;
+
+            // Monitor instruction signal
+            
+
+            // Wait for a few clock cycles between inputs
+            #10;
+        end
+		  $stop;
+
+        // Terminate the simulation
+        $finish;
+	  end 
+endmodule
